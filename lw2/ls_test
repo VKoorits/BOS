@@ -1,0 +1,12 @@
+.:
+total 12
+drw-rwxrwx. 2 liveuser liveuser 4096 Oct 13 09:01 dir
+-rw-rw----. 1 root     liveuser    5 Oct 13 08:58 file
+-rw-------. 1 liveuser liveuser    0 Oct 13 09:03 file1
+-rw-rw-rw-. 1 liveuser liveuser    0 Oct 13 09:04 file2
+-rw-rw-rw-. 1 liveuser liveuser    0 Oct 13 09:07 ls_test
+-rw-rw-rw-. 1 liveuser liveuser  832 Oct 13 09:07 lw2_history.txt
+
+./dir:
+total 0
+-????????? ? ? ? ?            ? new_file
