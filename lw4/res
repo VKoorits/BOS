@@ -1,0 +1,32 @@
+ find / -name *pass*
+ find / -iname *pass*
+ find / -maxdepth 1 -name *pass*
+ find /home -name *.bin
+ find / -type f -name *.bak 2>/dev/null | xargs rm
+ find / -type f -regex ".*\.\(txt\|sh\)"
+ find -type f -maxdepth 1 -printf "%f %u %g %n %s\n"
+ find -type d -maxdepth 1 -empty
+ find -type d -maxdepth 1-empty | xargs rmdir
+ find -maxdepth 1 -type f -empty | xargs rm
+ find -maxdepth 1 -links +0 -type f
+ find /etc -maxdepth 1 -not -user root
+ find / -not -name *.sh
+ find / -type f -links +2
+ find /usr/bin -type f -atime +90
+ find /usr/{bin,share} -mtime -10
+ find /tmp -type f -mtime +14 | xargs rm
+ find /usr/bin -perm -u+s -o -perm -g+s
+ ===================
+ find / -type f -name *.txt 2>/dev/null | xargs wc -l
+ find / -type d -name *.svn | xargs -I {} bash -c "find $1{} -type f -printf '%f\n' && rm -rf $1{}"
+ find / -type f -name *.sh | xargs chmod +x
+ find /etc -type f -name *.conf | xargs du -b | awk '{ sum += $1 } END { print sum }'
+ ===========
+ cat /var/log/messages | grep -i error
+ cat /var/log/messages | grep -ivc error
+ cat /var/log/messages | grep "^ERROR$"
+ cat /etc/group | grep -c 'wheel'
+ grep -r '#!/bin/bash'
+ grep -r '#!/bin/bash' -A 10
+ grep echo -r --include=\*.sh
+ grep echo -rn --include=\*.sh
