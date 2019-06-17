@@ -1,0 +1,70 @@
+ldd /bin/login | grep pam
+	libpam.so.0 => /lib64/libpam.so.0 (0x00007f4c9d02c000)
+	libpam_misc.so.0 => /lib64/libpam_misc.so.0 (0x00007f4c9ce28000)
+
+ls -l /lib64/libpam*
+lrwxrwxrwx. 1 root root    17 Jun 15 09:27 /lib64/libpamc.so.0 -> libpamc.so.0.82.1
+-rwxr-xr-x. 1 root root 15600 Jun 15  2019 /lib64/libpamc.so.0.82.1
+lrwxrwxrwx. 1 root root    21 Jun 15 09:27 /lib64/libpam_misc.so.0 -> libpam_misc.so.0.82.0
+-rwxr-xr-x. 1 root root 15632 Jun 15  2019 /lib64/libpam_misc.so.0.82.0
+lrwxrwxrwx. 1 root root    16 Jun 15 09:27 /lib64/libpam.so.0 -> libpam.so.0.83.1
+-rwxr-xr-x. 1 root root 61672 Jun 15  2019 /lib64/libpam.so.0.83.1
+
+ls -l /lib64/security
+total 1060
+-rwxr-xr-x. 1 root root  19664 Jun 15  2019 pam_access.so
+-rwxr-xr-x. 1 root root  11176 Jun 15  2019 pam_cap.so
+-rwxr-xr-x. 1 root root  11184 Jun 15  2019 pam_chroot.so
+-rwxr-xr-x. 1 root root  28256 Jun 15  2019 pam_console.so
+-rwxr-xr-x. 1 root root  15392 Jun 15  2019 pam_cracklib.so
+-rwxr-xr-x. 1 root root  11168 Jun 15  2019 pam_debug.so
+-rwxr-xr-x. 1 root root   6872 Jun 15  2019 pam_deny.so
+-rwxr-xr-x. 1 root root  11208 Jun 15  2019 pam_echo.so
+-rwxr-xr-x. 1 root root  15552 Jun 15  2019 pam_env.so
+-rwxr-xr-x. 1 root root  15536 Jun 15  2019 pam_exec.so
+-rwxr-xr-x. 1 root root  11168 Jun 15  2019 pam_faildelay.so
+-rwxr-xr-x. 1 root root  15512 Jun 15  2019 pam_faillock.so
+drwxr-xr-x. 2 root root     24 Jun 15 09:27 pam_filter
+-rwxr-xr-x. 1 root root  15456 Jun 15  2019 pam_filter.so
+-rwxr-xr-x. 1 root root  11088 Jun 15  2019 pam_ftp.so
+-rwxr-xr-x. 1 root root  15400 Jun 15  2019 pam_group.so
+-rwxr-xr-x. 1 root root  11272 Jun 15  2019 pam_issue.so
+-rwxr-xr-x. 1 root root  11152 Jun 15  2019 pam_keyinit.so
+-rwxr-xr-x. 1 root root  15480 Jun 15  2019 pam_lastlog.so
+-rwxr-xr-x. 1 root root  19600 Jun 15  2019 pam_limits.so
+-rwxr-xr-x. 1 root root  11224 Jun 15  2019 pam_listfile.so
+-rwxr-xr-x. 1 root root  11144 Jun 15  2019 pam_localuser.so
+-rwxr-xr-x. 1 root root  11200 Jun 15  2019 pam_loginuid.so
+-rwxr-xr-x. 1 root root  11200 Jun 15  2019 pam_mail.so
+-rwxr-xr-x. 1 root root  11192 Jun 15  2019 pam_mkhomedir.so
+-rwxr-xr-x. 1 root root   7088 Jun 15  2019 pam_motd.so
+-rwxr-xr-x. 1 root root  40784 Jun 15  2019 pam_namespace.so
+-rwxr-xr-x. 1 root root  11176 Jun 15  2019 pam_nologin.so
+-rwxr-xr-x. 1 root root   6984 Jun 15  2019 pam_permit.so
+-rwxr-xr-x. 1 root root   6960 Jun 15  2019 pam_postgresok.so
+-rwxr-xr-x. 1 root root  19752 Jun 15  2019 pam_pwhistory.so
+-rwxr-xr-x. 1 root root  11232 Jun 15  2019 pam_pwquality.so
+-rwxr-xr-x. 1 root root  11088 Jun 15  2019 pam_rhosts.so
+-rwxr-xr-x. 1 root root  11232 Jun 15  2019 pam_rootok.so
+-rwxr-xr-x. 1 root root  11216 Jun 15  2019 pam_securetty.so
+lrwxrwxrwx. 1 root root     15 Jun 15 09:27 pam_selinux_permit.so -> pam_sepermit.so
+-rwxr-xr-x. 1 root root  19760 Jun 15  2019 pam_selinux.so
+-rwxr-xr-x. 1 root root  15496 Jun 15  2019 pam_sepermit.so
+-rwxr-xr-x. 1 root root   7032 Jun 15  2019 pam_shells.so
+-rwxr-xr-x. 1 root root  15392 Jun 15  2019 pam_stress.so
+-rwxr-xr-x. 1 root root  15408 Jun 15  2019 pam_succeed_if.so
+-rwxr-xr-x. 1 root root 309272 Oct 30  2019 pam_systemd.so
+-rwxr-xr-x. 1 root root  15528 Jun 15  2019 pam_tally2.so
+-rwxr-xr-x. 1 root root  15352 Jun 15  2019 pam_time.so
+-rwxr-xr-x. 1 root root  19864 Jun 15  2019 pam_timestamp.so
+-rwxr-xr-x. 1 root root  11232 Jun 15  2019 pam_tty_audit.so
+-rwxr-xr-x. 1 root root  11240 Jun 15  2019 pam_umask.so
+lrwxrwxrwx. 1 root root     11 Jun 15 09:27 pam_unix_acct.so -> pam_unix.so
+lrwxrwxrwx. 1 root root     11 Jun 15 09:27 pam_unix_auth.so -> pam_unix.so
+lrwxrwxrwx. 1 root root     11 Jun 15 09:27 pam_unix_passwd.so -> pam_unix.so
+lrwxrwxrwx. 1 root root     11 Jun 15 09:27 pam_unix_session.so -> pam_unix.so
+-rwxr-xr-x. 1 root root  57728 Jun 15  2019 pam_unix.so
+-rwxr-xr-x. 1 root root  15384 Jun 15  2019 pam_userdb.so
+-rwxr-xr-x. 1 root root   7008 Jun 15  2019 pam_warn.so
+-rwxr-xr-x. 1 root root  11176 Jun 15  2019 pam_wheel.so
+-rwxr-xr-x. 1 root root 19752 Jun 15 2019 pam_xauth.so
